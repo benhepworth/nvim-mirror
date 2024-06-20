@@ -107,6 +107,13 @@ return {
           filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
         })
       end,
+      ["spectral"] = function()
+        -- configure emmet language server
+        lspconfig["spectral"].setup({
+          capabilities = capabilities,
+          filetypes = { "yaml", "json", "yml" },
+        })
+      end,
       ["emmet_ls"] = function()
         -- configure emmet language server
         lspconfig["emmet_ls"].setup({
